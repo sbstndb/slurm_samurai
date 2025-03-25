@@ -16,7 +16,7 @@ do
         echo "Soumission job avec level=$level et ntasks=$ntasks"
         
         # Lancement du job avec sbatch
-        sbatch ./test.sh \
+        sbatch ./testcase.sh \
             --max-level "$level" \
             --min-level "$level" \
             --ntasks "$ntasks"
