@@ -25,4 +25,3 @@ do
 done
 
 echo "Tous les jobs ont été soumis."
-

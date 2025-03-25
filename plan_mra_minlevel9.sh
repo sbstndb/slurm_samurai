@@ -2,23 +2,23 @@
 
 # Script pour lancer une matrice d'expériences
 
-LEVEL_START=8
-LEVEL_END=15
+MAX_LEVEL_START=9
+MAX_LEVEL_END=15
 
 NTASKS_VALUES=(1 2 4 8 16 32)
 
 # Boucle sur max-level
-for ((level = $LEVEL_START; level <= $LEVEL_END; level++))
+for ((max_level = $MAX_LEVEL_START; max_level <= $MAX_LEVEL_END; max_level++))
 do
     # Boucle sur ntasks
     for ntasks in "${NTASKS_VALUES[@]}"
     do
-        echo "Soumission job avec level=$level et ntasks=$ntasks"
+        echo "Soumission job avec max-level=$max_level et ntasks=$ntasks"
         
         # Lancement du job avec sbatch
         sbatch ./test.sh \
-            --max-level "$level" \
-            --min-level "$level" \
+            --max-level "$max_level" \
+            --min-level 9 \
             --ntasks "$ntasks"
         
 #       sleep 1
