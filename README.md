@@ -22,8 +22,8 @@ Here are the diferent files of this repo :
 - `old directory` : Here are the old scripts doing an experimental design
 - `plan_mra.sh` : Experimental design varying the number of MPI ranks on adapted meshs
 - `plan_uniform.sh` : Experimental design varying the number of MPI ranks on uniform meshs
-- `test_dist.sh` : Launch a test-case in distributed case
-- `test.sh` : Launch a test-case on a single node
+- `testcase_dist.sh` : Launch a test-case in distributed case
+- `testcase.sh` : Launch a test-case on a single node
 - `plan_mra_minlevel9.sh` : Same but with minlevel to 9, reduce the amount of MPI communications
 - `print_timing.sh` : Command to grep the total walltime in a log file printed with --timers, just in case. 
 
